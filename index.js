@@ -3,9 +3,11 @@ const PORT = 1800;
 const app = express();
 
 const facultyRouter = require('./routes/faculty')
+const deptRouter = require('./routes/department')
 app.use(express.json());
 
 app.use(facultyRouter)
+app.use(deptRouter)
 
 app.use('/', (req,res) =>{
     res.send('hello world')
