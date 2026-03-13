@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "sql3819861",
-    "password": " 1l7D3IDY3H",
+    "password": "1l7D3IDY3H",
     "database": "sql3819861",
     "host": "sql3.freesqldatabase.com",
     "dialect": "mysql"
