@@ -24,6 +24,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      dateCreated:{
+        type:Sequelize.DATE,
+        allowNull: false
+      },
       facultyId: {
         type: Sequelize.UUID,
         allowNull:false,
@@ -34,6 +38,10 @@ module.exports = {
         }
       },
       createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      },
+      updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
       },
