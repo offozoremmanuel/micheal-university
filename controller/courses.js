@@ -2,8 +2,8 @@ const { courseTable } = require('../models');
 
 exports.createCourse = async (req, res) => {
     try {
-        const { courseName,departmentName } = req.body;
-         const {departmentId} = req.params;
+        const { courseName} = req.body;
+         const {lecturerName,department} = req.params;
         const coursegen = courseName.split(' ').filter(word => word.length > 0).map(word => word[0]).join('').toUpperCase();
         const randomNum = Math.floor(100 + Math.random() * 700);
         const generatedCode = `${coursegen}-${randomNum}`;
@@ -11,8 +11,8 @@ exports.createCourse = async (req, res) => {
         const newCourse = await courseTable.create({
             courseName,
             courseCode: generatedCode,
-            departmentName,
-            departmentId
+            department,
+            lecturerName
         });
 
         res.status(201).json({
