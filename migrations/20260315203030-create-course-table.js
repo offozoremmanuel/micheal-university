@@ -17,18 +17,25 @@ module.exports = {
         type: Sequelize.STRING,
         unique: true,
       },
-      departmentName: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      departmentId: {
+    
+      department: {
         type: Sequelize.UUID,
         allowNull: false,
         foreignKey: true,
         references: {
           model:"departmentTables",
           key: "id"
+        },
+      },
+      lecturerName: {
+        type: Sequelize.UUID,
+        allowNull: false,
+        foreignKey: true,
+        references: {
+          model:"staffTables",
+          key: "id"
         }
+
       },
       createdAt: {
         allowNull: false,
