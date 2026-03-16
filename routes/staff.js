@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const {createStaff}= require('../controller/staff')
 
- router.post('/staff', createStaff);
+ router.post('/staff/:facultyId', createStaff);
 
 
  module.exports = router
